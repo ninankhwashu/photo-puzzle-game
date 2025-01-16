@@ -6,7 +6,7 @@
 
 body {
   font-family: "Righteous", serif;
-  background: linear-gradient(to bottom right, #241705, #bc430d);
+  background: linear-gradient(to bottom right, #5a136e, #a90b84, #ff009c);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -14,10 +14,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   padding: 20px;
-}
-
-#app {
-  margin-top: 200px;
 }
 
 h1 {
@@ -99,8 +95,9 @@ label {
 #photoResultsHeading {
   display: none;
   text-align: center;
-  font-size: 1.5rem;
-  color: #ff6b6b;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -108,6 +105,10 @@ label {
 #scoreboard,
 #newGameButton {
   display: none;
+}
+
+#puzzleArea {
+  text-align: center;
 }
 
 #puzzleGrid {
@@ -123,10 +124,21 @@ label {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+#scoreboard {
+  margin-top: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+#scoreList {
+  color: #ffffff;
+  list-style-type: none;
+}
+
 #newGameButton {
   margin: 20px auto;
   padding: 10px 20px;
-  background: #ff6b6b;
+  background: #f5be41;
   border: none;
   border-radius: 30px;
   color: #ffffff;
