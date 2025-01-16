@@ -6,6 +6,8 @@ let timerInterval;
 let timeElapsed = 0;
 let currentPage = 1;
 let isFetching = false;
+let hintsLeft = 3;
+let currentImage = "";
 
 document.getElementById("photoSearch").addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -21,6 +23,49 @@ document
 document
   .getElementById("newGameButton")
   .addEventListener("click", () => location.reload());
+
+document.getElementById("hintButton").addEventListener("click", () => {
+  if (hintsLeft > 0) {
+    showHint();
+  } else {
+    alert("No hints left!");
+  }
+});
+
+function showHint() {
+  const puzzleGrid = document.getElementById("puzzleGrid");
+
+  const fullImageOverlay = document.createElement("div");
+  fullImageOverlay.style.position = "absolute";
+  fullImageOverlay.style.top = "100";
+  fullImageOverlay.style.left = "0";
+  fullImageOverlay.style.width = `${puzzleGrid.offsetWidth}px`;
+  fullImageOverlay.style.height = `${puzzleGrid.offsetHeight}px`;
+  fullImageOverlay.style.maxWidth = "50%";
+  fullImageOverlay.style.maxHeight = "50%";
+  fullImageOverlay.style.backgroundImage = `url(${currentImage})`;
+  fullImageOverlay.style.backgroundSize = "cover";
+  fullImageOverlay.style.backgroundPosition = "center";
+  fullImageOverlay.style.opacity = "1";
+  fullImageOverlay.style.zIndex = "1000";
+  fullImageOverlay.style.transform = "translate(50%, 20%)";
+  fullImageOverlay.style.boxShadow = "0 0 20px 10px rgba(255, 255, 255, 0.8)";
+
+  puzzleGrid.appendChild(fullImageOverlay);
+
+  setTimeout(() => {
+    puzzleGrid.removeChild(fullImageOverlay);
+  }, 3000);
+
+  hintsLeft--;
+  document.getElementById("hintsLeft").textContent = hintsLeft;
+
+  if (hintsLeft === 0) {
+    document.getElementById("hintButton").disabled = true;
+    document.getElementById("hintButton").style.background = "#cccccc";
+    document.getElementById("hintButton").style.cursor = "not-allowed";
+  }
+}
 
 function searchPhotos() {
   const query = document.getElementById("photoSearch").value.trim();
@@ -85,6 +130,7 @@ function setupInfiniteScroll() {
 }
 
 function startPuzzle(imageSrc) {
+  currentImage = imageSrc;
   document.getElementById("photoResultsHeading").style.display = "none";
   document.getElementById("photoResults").style.display = "none";
   document.getElementById("puzzleArea").style.display = "block";
