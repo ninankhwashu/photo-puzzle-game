@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 id="gameTitle">Photo Puzzle Game</h1>
+      <div class="controls" id="controls">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="photoSearch"
+            placeholder="Search for a photo..."
+          />
+          <button id="searchButton">Search</button>
+        </div>
+        <div class="difficulty">
+          <label for="difficulty">Difficulty:</label>
+          <select id="difficulty">
+            <option value="3">3x3</option>
+            <option value="4" selected>4x4</option>
+            <option value="5">5x5</option>
+          </select>
+        </div>
+      </div>
+      <h2 id="photoResultsHeading">Choose an image for your puzzle</h2>
+      <div id="photoResults"></div>
+      <div id="puzzleArea">
+        <h2>Puzzle Area</h2>
+        <p>Time: <span id="timer">0</span> seconds</p>
+        <p>Correct Pieces: <span id="correctPieces">0</span></p>
+        <div id="puzzleGrid"></div>
+      </div>
+      <div id="scoreboard">
+        <h2>Scoreboard</h2>
+        <ul id="scoreList"></ul>
+      </div>
+      <button id="newGameButton">New Game</button>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
