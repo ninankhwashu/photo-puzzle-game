@@ -7,6 +7,13 @@ let timeElapsed = 0;
 let currentPage = 1;
 let isFetching = false;
 
+document.getElementById("photoSearch").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    searchPhotos();
+  }
+});
+
 document.getElementById("searchButton").addEventListener("click", searchPhotos);
 document
   .getElementById("difficulty")
