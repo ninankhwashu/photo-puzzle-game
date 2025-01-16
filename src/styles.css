@@ -72,6 +72,24 @@ label {
   border: 3px solid #f5be41;
 }
 
+.instructions {
+  padding: 20px;
+  background-color: #5a136e;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 12px;
+}
+.instructions h2 {
+  font-size: 20px;
+  background-color: #ff009c;
+  border-radius: 10px;
+}
+#instruction {
+  text-transform: uppercase;
+  color: #f5be41;
+  text-shadow: px 1px 1px #000000;
+}
+
 #photoResults {
   display: none;
   flex-wrap: wrap;
