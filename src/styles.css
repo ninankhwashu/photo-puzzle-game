@@ -14,6 +14,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   padding: 20px;
+  transform: scale(0.9); /* Adjust the scale value as needed */
+  transform-origin: top; /* Ensure the scaling starts from the top left corner */
 }
 
 h1 {
@@ -169,4 +171,31 @@ label {
   background: #ff4040;
   box-shadow: 0px 6px 15px rgba(255, 64, 64, 0.7);
   transform: scale(1.05);
+}
+
+#hintButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ffa502;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#hintButton:hover {
+  background: #e69500;
+  transform: scale(1.05);
+}
+
+#hintButton:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+#hintsLeft {
+  font-weight: bold;
+  color: #ffa502;
 }
