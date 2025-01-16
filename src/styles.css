@@ -6,7 +6,7 @@
 
 body {
   font-family: "Righteous", serif;
-  background: linear-gradient(to bottom right, #081c24, #ff009d);
+  background: linear-gradient(to bottom right, #241705, #bc430d);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 50px;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -37,17 +37,17 @@ h1 {
 
 .controls input[type="text"] {
   padding: 10px 20px;
-  font-size: 1rem;
-  border: 2px solid #3a3a5f;
+  font-size: 20px;
+  border: 2px solid #f5be41;
   border-radius: 30px;
-  background: #25253e;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   transition: all 0.3s ease;
 }
 
 .controls button {
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 18px;
   color: #ffffff;
   background: #f5be41;
   border: none;
@@ -65,14 +65,15 @@ label {
 }
 
 .difficulty {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 #difficulty {
   border-radius: 12px;
   border: none;
   padding: 3px;
-  background-color: #f5be41;
+  background-color: #ffffff;
+  border: 3px solid #f5be41;
 }
 
 #photoResults {
