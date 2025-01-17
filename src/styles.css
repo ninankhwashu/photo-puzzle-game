@@ -5,24 +5,27 @@
 }
 
 body {
-  font-family: "Righteous", serif;
-  background: linear-gradient(to bottom right, #5a136e, #a90b84, #ff009c);
+  font-family: "Noto Sans", serif;
+  background: url(bg6.jpg) no-repeat center center fixed;
+  background-size: cover;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow-x: hidden;
   padding: 20px;
-  transform: scale(0.9); /* Adjust the scale value as needed */
-  transform-origin: top; /* Ensure the scaling starts from the top left corner */
+  transform: scale(0.9);
+  transform-origin: top;
 }
 
 h1 {
+  font-family: "Rum Raisin", serif;
+  text-shadow: 0px 2px 2px #000000;
   text-align: center;
   font-size: 50px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #68feba;
 }
 
 .controls {
@@ -57,13 +60,15 @@ h1 {
 }
 
 label {
-  font-size: 1rem;
+  font-size: 16px;
   margin-right: 10px;
   color: #ffffff;
 }
 
 .difficulty {
-  margin-top: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 #difficulty {
@@ -75,21 +80,26 @@ label {
 }
 
 .instructions {
+  margin: 0 150px;
   padding: 20px;
-  background-color: #5a136e;
+  background-color: #feffab;
   text-align: center;
   margin-top: 15px;
   border-radius: 12px;
+  color: #000000;
 }
 .instructions h2 {
+  margin: 0 250px;
+  padding: 10px;
+  font-family: Helvetica;
   font-size: 20px;
-  background-color: #ff009c;
+  background-color: #68feba;
   border-radius: 10px;
 }
 #instruction {
   text-transform: uppercase;
   color: #f5be41;
-  text-shadow: px 1px 1px #000000;
+  text-shadow: 0px 1px 1px #000000;
 }
 
 #photoResults {
@@ -131,6 +141,17 @@ label {
   text-align: center;
 }
 
+.inline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline-text {
+  margin-right: 10px;
+}
+
 #puzzleGrid {
   display: grid;
   gap: 2px;
@@ -145,6 +166,9 @@ label {
 }
 
 #scoreboard {
+  background-color: #ff009c;
+  padding: 20px;
+  border-radius: 12px;
   margin-top: 20px;
   text-align: center;
   color: #000000;
@@ -156,13 +180,13 @@ label {
 }
 
 #newGameButton {
-  margin: 20px auto;
+  margin-top: 10px;
   padding: 10px 20px;
   background: #f5be41;
   border: none;
   border-radius: 30px;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -180,7 +204,7 @@ label {
   border: none;
   border-radius: 30px;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
