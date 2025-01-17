@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rum+Raisin&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles.css" />
@@ -25,7 +25,7 @@
           <button id="searchButton">Search</button>
         </div>
         <div class="difficulty">
-          <label for="difficulty">Difficulty Level:</label>
+          <label for="difficulty">Level:</label>
           <select id="difficulty">
             <option value="3">3x3</option>
             <option value="4" selected>4x4</option>
@@ -80,17 +80,21 @@
       <div id="photoResults"></div>
       <div id="puzzleArea">
         <h2>Solve This Puzzle 🧠🙌</h2>
-        <p>Time: <span id="timer">0</span> seconds</p>
-        <p>Correct Pieces: <span id="correctPieces">0</span></p>
-        <p>Hints: <span id="hintsLeft">3</span></p>
-        <button id="hintButton">Show Hint</button>
+        <div class="inline-container">
+          <p class="inline-text">Time: <span id="timer">0</span> seconds</p>
+          <p class="inline-text">
+            Correct Pieces: <span id="correctPieces">0</span>
+          </p>
+          <p class="inline-text">Hints: <span id="hintsLeft">3</span></p>
+          <button id="hintButton">Show Hint</button>
+          <button id="newGameButton">New Game</button>
+        </div>
         <div id="puzzleGrid"></div>
       </div>
       <div id="scoreboard">
         <h2>Scoreboard</h2>
         <ul id="scoreList"></ul>
       </div>
-      <button id="newGameButton">New Game</button>
     </div>
     <script src="src/script.js"></script>
   </body>
