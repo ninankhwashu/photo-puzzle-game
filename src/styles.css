@@ -25,7 +25,7 @@ h1 {
   text-align: center;
   font-size: 50px;
   margin-bottom: 20px;
-  color: #68feba;
+  color: #b2f100;
 }
 
 .controls {
@@ -39,7 +39,7 @@ h1 {
 .controls input[type="text"] {
   padding: 10px 20px;
   font-size: 20px;
-  border: 2px solid #f5be41;
+  border: 2px solid #ffc120;
   border-radius: 30px;
   background-color: #ffffff;
   color: #000000;
@@ -48,15 +48,19 @@ h1 {
 
 .controls button {
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 20px;
   color: #ffffff;
-  background: #f5be41;
+  background: #ffc120;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: bold;
-  box-shadow: 0px 4px 10px rgba(255, 107, 107, 0.5);
+}
+.controls button:hover {
+  background: #b2f100;
+  box-shadow: 0px 6px 15px rgba(255, 0, 156, 0.7);
+  transform: scale(1.05);
 }
 
 label {
@@ -68,7 +72,10 @@ label {
 .difficulty {
   margin-top: 10px;
   font-weight: bold;
-  text-transform: uppercase;
+}
+.difficulty label {
+  font-size: 20px;
+  color: #b2f100;
 }
 
 #difficulty {
@@ -76,7 +83,7 @@ label {
   border: none;
   padding: 3px;
   background-color: #ffffff;
-  border: 3px solid #f5be41;
+  border: 3px solid #ffc120;
 }
 
 .instructions {
@@ -89,16 +96,22 @@ label {
   color: #000000;
 }
 .instructions h2 {
-  margin: 0 250px;
+  margin: 0 180px;
   padding: 10px;
   font-family: Helvetica;
   font-size: 20px;
-  background-color: #68feba;
+  background-color: #b2f100;
   border-radius: 10px;
 }
 #instruction {
   text-transform: uppercase;
-  color: #f5be41;
+  color: #000000;
+  text-shadow: #b2f100;
+  font-weight: bold;
+}
+
+.credit {
+  color: #ffffff;
   text-shadow: 0px 1px 1px #000000;
 }
 
@@ -119,14 +132,17 @@ label {
 
 #photoResults img:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 8px 20px #b2f100;
 }
 
 #photoResultsHeading {
   display: none;
+  background-color: #feffab;
+  padding: 5px 10px;
+  border-radius: 12px;
   text-align: center;
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -140,8 +156,14 @@ label {
 #puzzleArea {
   text-align: center;
 }
+#puzzleArea h2 {
+  text-shadow: 0 1px 1px #b2f100;
+}
 
 .inline-container {
+  padding: 5px;
+  background-color: #feffab;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,7 +171,66 @@ label {
 }
 
 .inline-text {
+  color: #000000;
   margin-right: 10px;
+}
+
+#timer {
+  background-color: #b2f100;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+#correctPieces {
+  background-color: #b2f100;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+#hintButton {
+  padding: 10px 20px;
+  background: #ff009cb3;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#hintButton:hover {
+  background: #b2f100;
+  box-shadow: 0px 6px 15px rgba(255, 0, 156, 0.7);
+  transform: scale(1.05);
+}
+
+#hintButton:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+#hintsLeft {
+  background-color: #ff009cb3;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#newGameButton {
+  padding: 10px 20px;
+  background: #0091ad;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#newGameButton:hover {
+  background: #55c4da;
+  box-shadow: 0px 6px 15px rgb(178, 241, 0, 0.7);
+  transform: scale(1.05);
 }
 
 #puzzleGrid {
@@ -166,8 +247,8 @@ label {
 }
 
 #scoreboard {
-  background-color: #ff009c;
-  padding: 20px;
+  background-color: #feffab;
+  padding: 5px;
   border-radius: 12px;
   margin-top: 20px;
   text-align: center;
@@ -175,51 +256,7 @@ label {
 }
 
 #scoreList {
-  color: #ffffff;
+  color: #0091ad;
   list-style-type: none;
-}
-
-#newGameButton {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #f5be41;
-  border: none;
-  border-radius: 30px;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#newGameButton:hover {
-  background: #ff4040;
-  box-shadow: 0px 6px 15px rgba(255, 64, 64, 0.7);
-  transform: scale(1.05);
-}
-
-#hintButton {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #ffa502;
-  border: none;
-  border-radius: 30px;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#hintButton:hover {
-  background: #e69500;
-  transform: scale(1.05);
-}
-
-#hintButton:disabled {
-  background: #cccccc;
-  cursor: not-allowed;
-}
-
-#hintsLeft {
-  font-weight: bold;
-  color: #ffa502;
+  text-shadow: 0px 0px 1px #000000;
 }

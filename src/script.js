@@ -49,7 +49,7 @@ function showHint() {
   fullImageOverlay.style.opacity = "1";
   fullImageOverlay.style.zIndex = "1000";
   fullImageOverlay.style.transform = "translate(20%, 0%)";
-  fullImageOverlay.style.boxShadow = "0 0 20px 10px rgba(0, 0, 0, 1)";
+  fullImageOverlay.style.boxShadow = "0 0 20px 10px rgb(178, 241, 0, 0.7)";
 
   puzzleGrid.appendChild(fullImageOverlay);
 
@@ -233,7 +233,9 @@ function checkProgress() {
   if (correctCount === rows * cols) {
     clearInterval(timerInterval);
     addToScoreboard();
-    alert(`Congratulations! You solved the puzzle in ${timeElapsed} seconds!`);
+    alert(
+      `Congratulations 🎉! You solved the puzzle in ${timeElapsed} seconds 🙌! Review your score under the Scoreboard 🥇`
+    );
   }
 }
 
