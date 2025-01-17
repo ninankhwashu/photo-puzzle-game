@@ -41,15 +41,15 @@ function showHint() {
   fullImageOverlay.style.left = "0";
   fullImageOverlay.style.width = `${puzzleGrid.offsetWidth}px`;
   fullImageOverlay.style.height = `${puzzleGrid.offsetHeight}px`;
-  fullImageOverlay.style.maxWidth = "50%";
-  fullImageOverlay.style.maxHeight = "50%";
+  fullImageOverlay.style.maxWidth = "auto";
+  fullImageOverlay.style.maxHeight = "auto";
   fullImageOverlay.style.backgroundImage = `url(${currentImage})`;
   fullImageOverlay.style.backgroundSize = "cover";
   fullImageOverlay.style.backgroundPosition = "center";
   fullImageOverlay.style.opacity = "1";
   fullImageOverlay.style.zIndex = "1000";
-  fullImageOverlay.style.transform = "translate(50%, 20%)";
-  fullImageOverlay.style.boxShadow = "0 0 20px 10px rgba(255, 255, 255, 0.8)";
+  fullImageOverlay.style.transform = "translate(20%, 0%)";
+  fullImageOverlay.style.boxShadow = "0 0 20px 10px rgba(0, 0, 0, 1)";
 
   puzzleGrid.appendChild(fullImageOverlay);
 
