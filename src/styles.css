@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: "Noto Sans", serif;
-  background: url(bg6.jpg) no-repeat center center fixed;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: url(bg6.png) no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
   display: flex;
@@ -20,12 +20,13 @@ body {
 }
 
 h1 {
-  font-family: "Rum Raisin", serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   text-shadow: 0px 2px 2px #000000;
   text-align: center;
   font-size: 50px;
   margin-bottom: 20px;
-  color: #b2f100;
+  color: #e9f3ff;
 }
 
 .controls {
@@ -37,9 +38,10 @@ h1 {
 }
 
 .controls input[type="text"] {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 10px 20px;
   font-size: 20px;
-  border: 2px solid #ffc120;
+  border: 2px solid #0b1957;
   border-radius: 30px;
   background-color: #ffffff;
   color: #000000;
@@ -47,10 +49,11 @@ h1 {
 }
 
 .controls button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 10px 20px;
   font-size: 20px;
   color: #ffffff;
-  background: #ffc120;
+  background: #0b1957;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -58,7 +61,7 @@ h1 {
   font-weight: bold;
 }
 .controls button:hover {
-  background: #b2f100;
+  background: #501f5b;
   box-shadow: 0px 6px 15px rgba(255, 0, 156, 0.7);
   transform: scale(1.05);
 }
@@ -74,8 +77,17 @@ label {
   font-weight: bold;
 }
 .difficulty label {
-  font-size: 20px;
-  color: #b2f100;
+  padding: 5px 10px;
+  font-size: 18px;
+  color: #ffffff;
+  background: #0892a5;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0px 1px 1px #000000;
 }
 
 #difficulty {
@@ -83,36 +95,38 @@ label {
   border: none;
   padding: 3px;
   background-color: #ffffff;
-  border: 3px solid #ffc120;
+  border: 3px solid #0b1957;
 }
 
 .instructions {
   margin: 0 150px;
   padding: 20px;
-  background-color: #feffab;
+  background-color: #e9f3ff;
   text-align: center;
   margin-top: 15px;
   border-radius: 12px;
+  border: #0892a5 solid 3px;
   color: #000000;
 }
 .instructions h2 {
   margin: 0 180px;
   padding: 10px;
-  font-family: Helvetica;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
-  background-color: #b2f100;
+  background-color: #0892a5;
+  color: #ffffff;
   border-radius: 10px;
 }
 #instruction {
   text-transform: uppercase;
   color: #000000;
-  text-shadow: #b2f100;
+  text-shadow: #501f5b;
   font-weight: bold;
 }
 
 .credit {
-  color: #ffffff;
-  text-shadow: 0px 1px 1px #000000;
+  color: #0b1957;
+  text-shadow: 0px 1px 1px #0892a5;
 }
 
 #photoResults {
@@ -132,17 +146,17 @@ label {
 
 #photoResults img:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 20px #b2f100;
+  box-shadow: 0px 8px 20px #501f5b;
 }
 
 #photoResultsHeading {
   display: none;
-  background-color: #feffab;
+  background-color: #0892a5;
   padding: 5px 10px;
   border-radius: 12px;
   text-align: center;
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -157,12 +171,12 @@ label {
   text-align: center;
 }
 #puzzleArea h2 {
-  text-shadow: 0 1px 1px #b2f100;
+  text-shadow: 0 1px 1px #501f5b;
 }
 
 .inline-container {
   padding: 5px;
-  background-color: #feffab;
+  background-color: #0892a5;
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -176,19 +190,20 @@ label {
 }
 
 #timer {
-  background-color: #b2f100;
+  background-color: #f9cbdf;
   border-radius: 20px;
   padding: 5px 10px;
 }
 
 #correctPieces {
-  background-color: #b2f100;
+  background-color: #8f7ab8;
+  color: #ffffff;
   border-radius: 20px;
   padding: 5px 10px;
 }
 #hintButton {
   padding: 10px 20px;
-  background: #ff009cb3;
+  background: #8ee54e;
   border: none;
   border-radius: 30px;
   color: #ffffff;
@@ -198,7 +213,8 @@ label {
 }
 
 #hintButton:hover {
-  background: #b2f100;
+  background: #d395e0;
+  color: #ffffff;
   box-shadow: 0px 6px 15px rgba(255, 0, 156, 0.7);
   transform: scale(1.05);
 }
@@ -218,7 +234,7 @@ label {
 
 #newGameButton {
   padding: 10px 20px;
-  background: #0091ad;
+  background: #501f5b;
   border: none;
   border-radius: 30px;
   color: #ffffff;
@@ -228,7 +244,7 @@ label {
 }
 
 #newGameButton:hover {
-  background: #55c4da;
+  background: #d395e0;
   box-shadow: 0px 6px 15px rgb(178, 241, 0, 0.7);
   transform: scale(1.05);
 }
@@ -247,7 +263,7 @@ label {
 }
 
 #scoreboard {
-  background-color: #feffab;
+  background-color: #0892a5;
   padding: 5px;
   border-radius: 12px;
   margin-top: 20px;
@@ -256,7 +272,7 @@ label {
 }
 
 #scoreList {
-  color: #0091ad;
+  color: #ffffff;
   list-style-type: none;
   text-shadow: 0px 0px 1px #000000;
 }
