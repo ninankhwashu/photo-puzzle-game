@@ -6,17 +6,26 @@
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background: url(bg6.png) no-repeat center center fixed;
-  background-size: cover;
+  background: linear-gradient(to bottom, #0b4650, #501f5b);
+
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 100vh;
+  max-height: auto;
   overflow-x: hidden;
   padding: 20px;
   transform: scale(0.9);
   transform-origin: top;
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 80px;
+  height: auto;
 }
 
 h1 {
@@ -101,12 +110,12 @@ label {
 .instructions {
   margin: 0 150px;
   padding: 20px;
-  background-color: #e9f3ff;
+  background: linear-gradient(to bottom, #501f5b, #0b4650);
   text-align: center;
   margin-top: 15px;
   border-radius: 12px;
   border: #0892a5 solid 3px;
-  color: #000000;
+  color: #ffffff;
 }
 .instructions h2 {
   margin: 0 180px;
@@ -119,14 +128,16 @@ label {
 }
 #instruction {
   text-transform: uppercase;
-  color: #000000;
+  color: #75fff1;
   text-shadow: #501f5b;
   font-weight: bold;
 }
 
 .credit {
-  color: #0b1957;
-  text-shadow: 0px 1px 1px #0892a5;
+  color: #ffffff;
+}
+.credit a {
+  color: #75fff1;
 }
 
 #photoResults {
