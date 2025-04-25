@@ -134,7 +134,9 @@ label {
 }
 
 .credit {
+  margin-top: 20px;
   color: #ffffff;
+  font-size: 20px;
 }
 .credit a {
   color: #75fff1;
